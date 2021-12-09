@@ -926,11 +926,7 @@ main {
         }
         .notes {
             font-size: 11px;
-            li {
-                list-style-type: "※";
-                margin-left: 1rem;
-            }
-            li + li {margin-top: 10px;}
+            li + li {margin-top: 8px;}
         }
     }
 }
