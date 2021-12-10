@@ -1087,8 +1087,10 @@ main {
 
 #gallery .inner #slider #thumbnail li {
   width: 19%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+}
+
+#gallery .inner #slider #thumbnail li:first-child img {
+  border: 6px solid #ffffff;
 }
 
 #gallery .inner #slider #thumbnail li:hover {

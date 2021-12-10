@@ -889,7 +889,9 @@ main {
                 justify-content: space-between;
                 li {
                     width: 19%;
-                    transition: 0.5s;
+                }
+                li:first-child {
+                    img {border: 6px solid #ffffff;}
                 }
                 li:hover {
                     filter: brightness(70%);
