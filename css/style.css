@@ -301,7 +301,7 @@ header nav {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 250px;
+  width: 200px;
   height: 100%;
   min-height: 300px;
   display: -webkit-box;
@@ -346,6 +346,7 @@ header nav ul li {
   text-align: left;
   font-family: "futura-pt", "Noto Sans JP", sans-serif;
   font-size: 20px;
+  font-weight: bold;
   color: #2b2b2b;
   -webkit-transition: color 0.1s;
   transition: color 0.1s;
@@ -526,7 +527,7 @@ main {
 
 #mv .mv-content .mv-title-box {
   position: absolute;
-  top: -20px;
+  top: 0;
   right: 0;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
@@ -542,6 +543,10 @@ main {
   font-size: 136px;
   letter-spacing: 0.1em;
   line-height: 1;
+  -webkit-filter: drop-shadow(0 0 4px white);
+          filter: drop-shadow(0 0 4px white);
+  will-change: filter;
+  /* drop-shadow 見切れ防止 */
 }
 
 #mv .mv-content .mv-title-box .mv-copy {
@@ -550,6 +555,10 @@ main {
   font-size: 32px;
   font-weight: 700;
   line-height: 1.5;
+  -webkit-filter: drop-shadow(0 0 4px white);
+          filter: drop-shadow(0 0 4px white);
+  will-change: filter;
+  /* drop-shadow 見切れ防止 */
 }
 
 #mv .mv-content .mv-title-box .btn {
