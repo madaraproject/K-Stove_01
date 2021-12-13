@@ -43,7 +43,7 @@ $(function(){
   alert check
   ===================================================*/
   $('.form-send').click(function check(){
-    if (mail_form.name.value == "" || mail_form.mail.value == "" || mail_form.address.value == ""){
+    if (mail_form.name.value == "" || mail_form.mail.value == "" || mail_form.address.value == "" || mail_form.post-title.value == ""){
         alert("未入力の必須項目があります。"); //エラーメッセージを出力
         return false; //送信ボタン本来の動作をキャンセルします
     } else {

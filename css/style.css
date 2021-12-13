@@ -439,7 +439,7 @@ main {
 
 #mv {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   min-height: 680px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -451,13 +451,22 @@ main {
   overflow: hidden;
 }
 
-#mv::before {
+#mv .scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  font-size: 10px;
+  font-weight: bold;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#mv .scroll-down::after {
   content: '';
   position: absolute;
-  bottom: 20px;
   left: 50%;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-right: 3px solid #2b2b2b;
   border-bottom: 3px solid #2b2b2b;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
@@ -468,42 +477,32 @@ main {
 
 @-webkit-keyframes updown {
   0% {
-    bottom: 22px;
+    top: 32px;
   }
   50% {
-    bottom: 18px;
+    top: 28px;
   }
   100% {
-    bottom: 22px;
+    top: 32px;
   }
 }
 
 @keyframes updown {
   0% {
-    bottom: 22px;
+    top: 32px;
   }
   50% {
-    bottom: 18px;
+    top: 28px;
   }
   100% {
-    bottom: 22px;
+    top: 32px;
   }
-}
-
-#mv::after {
-  content: 'Scroll Down';
-  font-size: 10px;
-  font-weight: bold;
-  position: absolute;
-  bottom: 45px;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 #mv .mv-content {
   position: relative;
   width: 100%;
+  height: 100%;
 }
 
 #mv .mv-content .logo-link .logo {
@@ -527,7 +526,7 @@ main {
 
 #mv .mv-content .mv-title-box {
   position: absolute;
-  top: -20px;
+  top: 50%;
   right: 0;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
@@ -572,7 +571,7 @@ main {
             justify-content: center;
   }
   #mv .mv-content {
-    padding-bottom: 60px;
+    position: relative;
   }
   #mv .mv-content .logo-link .logo {
     width: 80px;
@@ -589,11 +588,12 @@ main {
   }
   #mv .mv-content .mv-title-box {
     position: relative;
-    top: 0;
+    top: -20px;
     left: 50%;
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
     text-align: center;
+    margin-bottom: 20px;
   }
   #mv .mv-content .mv-title-box * + * {
     margin-top: 20px;
@@ -664,8 +664,12 @@ main {
 }
 
 #lead .lead-01 .lead-catch {
-  width: 50%;
-  margin-right: calc(50% - 50vw + 25px);
+  /*
+            width: 50%;
+            margin-right: -50px;
+            */
+  width: 50vw;
+  margin-right: calc(25px + calc(50% - 50vw));
   -webkit-filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
   will-change: filter;
@@ -941,7 +945,8 @@ main {
 }
 
 #product-owner .inner .owner-photo {
-  width: 240px;
+  width: 30%;
+  min-width: 260px;
   border-radius: 50%;
   margin-left: 80px;
   -webkit-filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
@@ -970,6 +975,8 @@ main {
     text-align: left;
   }
   #product-owner .inner .owner-photo {
+    width: 70%;
+    max-width: 340px;
     margin: 0 auto 40px auto;
   }
 }
@@ -1033,7 +1040,8 @@ main {
 }
 
 #product-member .inner .member-photo {
-  max-width: 240px;
+  width: 30%;
+  min-width: 260px;
   margin-right: 80px;
   -webkit-filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
@@ -1061,6 +1069,8 @@ main {
     text-align: left;
   }
   #product-member .inner .member-photo {
+    width: 70%;
+    max-width: 340px;
     margin: 0 auto 40px auto;
   }
 }
@@ -1169,8 +1179,14 @@ main {
 
 #order .inner p {
   text-align: center;
+  font-size: 16px;
   font-weight: bolder;
   margin-bottom: 20px;
+}
+
+#order .inner p span {
+  font-size: 12px;
+  font-weight: normal;
 }
 
 #order .inner .btn .btn-instagram:hover {
@@ -1222,7 +1238,7 @@ main {
   text-align: left;
   color: #ffffff;
   border-radius: 5px 5px 0 0;
-  background: #cd5954;
+  background: #ce4f4a;
   padding: 15px 15px;
 }
 
@@ -1250,6 +1266,7 @@ main {
 }
 
 #order .inner #toggle-area .form-table tr td input[type="text"],
+#order .inner #toggle-area .form-table tr td select,
 #order .inner #toggle-area .form-table tr td textarea {
   background: #f8f8f8;
   display: block;
@@ -1257,7 +1274,7 @@ main {
   width: 100%;
   -webkit-transition: 0.8s;
   transition: 0.8s;
-  border: 1px solid #eeeeee;
+  border: 1px solid #dddddd;
   border-radius: 0 0 5px 5px;
   padding: 12px 15px;
 }
@@ -1315,6 +1332,11 @@ main {
   font-size: 12px;
 }
 
+#order .inner #toggle-area .form-table tr .form-message a {
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+
 #order .inner #toggle-area .form-table tr .form-send {
   position: relative;
   display: -webkit-box;
@@ -1336,7 +1358,7 @@ main {
   line-height: 1;
   border: 2px solid #1b1b1b;
   border-radius: 45px;
-  background: #cd5954;
+  background: #ce4f4a;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   padding: 30px 0;

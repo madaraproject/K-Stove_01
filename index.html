@@ -72,6 +72,7 @@
                 <div class="btn"><a class="btn-inner" href="#order"><i class="fas fa-shopping-cart"></i>Order here.</a></div>
             </div>
         </div>
+        <p class="scroll-down">Scroll Down</p>
     </div>
 
     <!-- Info -->
@@ -143,9 +144,9 @@
         <div class="inner">
             <div class="owner-text-box fade-in fade-in-left">
                 <h2 class="head-02-b">PRODUCT OWNER</h2>
-                <h3 class="owner-copy">追い求めるのは、面白さ｡<br>好奇心が原動力｡</h3>
+                <h3 class="owner-copy">創り出すのは、面白さ｡<br>溢れる好奇心が原動力の<br>エンターテイナー｡</h3>
                 <h4 class="owner-name">小野 和也 ／ 「くろすけの森」 代表</h4>
-                <p class="owner-profile">1996年大分県生まれ。工業高校とエンターテインメント関係の専門学校を卒業。その後、キャンプ・DIY関連の動画を投稿するYouTubeチャンネル「くろすけの森」を開設。単なるキャンプ・DIY動画の投稿にとどまらず、自作のアウトドアギアの製作・発信も行う。常に楽しく新しいモノを追い求めることを目的としており、活動の制限を感じさせないコンテンツが「Instagram」「YouTube」を中心にアウトドア界隈で注目されている。</p>
+                <p class="owner-profile">1996年大分県生まれ。工業高校とエンターテインメント関係の専門学校を卒業。その後、キャンプ・DIY関連の動画を投稿するYouTubeチャンネル「くろすけの森」を開設。キャンプ・DIYだけでなく、自作のアウトドアギアの製作・発信も行う。常に新しく面白いモノを追い求めることを目的としており、活動の制限を感じさせないコンテンツが「Instagram」「YouTube」を中心にアウトドア界隈で注目されている。</p>
             </div>
             <img class="owner-photo fade-in fade-in-up" src="img/owner-photo.jpg" alt="">
         </div>
@@ -157,8 +158,8 @@
             <div class="member-text-box fade-in fade-in-right">
                 <h2 class="head-02-b">PRODUCT MEMBER</h2>
                 <h3 class="member-copy">専門分野を活かし､<br>プロダクトを様々な角度から<br>サポートするメンバー｡</h3>
-                <h4 class="member-name">YUKI ITO ／ WEBエンジニア</h4>
-                <p class="member-profile">Web関連のエンジニア兼デザイナー。販売企画・製品設計・宣伝のサポートを担当。商業高校とエンターテインメント関係の専門学校を卒業。楽曲・映像製作まで幅広く対応。</p>
+                <h4 class="member-name">YUKI ITO ／ Webエンジニア</h4>
+                <p class="member-profile">Web関連のエンジニア兼デザイナー。販売企画・製品設計・宣伝のサポートを担当。商業高校とエンターテインメント関係の専門学校を卒業。Web制作会社を経て現在はフリーランスでWeb制作を行う。その他にも楽曲・映像制作など、幅広く対応するマルチクリエイター。</p>
             </div>
             <img class="member-photo fade-in fade-in-up" src="img/member-photo.png" alt="">
         </div>
@@ -247,7 +248,7 @@
         <div class="inner wrapper">
             <h2 class="head-02 fade-in">ORDER</h2>
             <div class="visual-icon fade-in"><img src="img/cart.png" alt=""></div>
-            <p>ご注文はこちらから｡</p>
+            <p>ご注文はこちらから｡<br><span>※お一人様１台限りとさせていただきます｡</span></p>
             <div class="btn fade-in fade-in-up"><a class="btn-inner btn-instagram" href="https://www.instagram.com/kazuya_kurosuke/" target="_blank"><i class="fab fa-instagram"></i><span>Instagram</span></a></div>
             <div class="btn fade-in fade-in-up"><a class="btn-inner btn-mail"><i class="far fa-envelope"></i><span class="toggle-message">Open form.</span></a></div>
             
@@ -257,7 +258,7 @@
                     <tbody>
                         <form action="https://formspree.io/f/xvolorav" method="POST" name="mail_form">
                             <tr style="display: none;">
-                                <td><input type="hidden" name="_subject" value="K-Stove [KNM-KS01-A] お問い合わせ／ご注文通知" /></td>
+                                <td><input type="hidden" name="_subject" value="K-Stove [KNM-KS01-A] ご注文／お問い合わせ" /></td>
                             </tr>
                             <tr>
                                 <th>氏名<span>（必須）</span></th>
@@ -268,7 +269,7 @@
                                 <td><input type="text" name="mail" size="60" value="" placeholder="sample@sample.jp" required></td>
                             </tr>
                             <tr>
-                                <th>電話番号<span>（任意）</span></th>
+                                <th>電話番号</th>
                                 <td><input type="text" name="tel" size="60" value="" placeholder="000-1234-5678"></td>
                             </tr>
                             <tr>
@@ -276,14 +277,25 @@
                                 <td><input type="text" name="address" size="60" value="" placeholder="○○県△△市xx町１-１" required></td>
                             </tr>
                             <tr>
-                                <th>お問い合わせ内容<span>（任意）</span></th>
-                                <td><textarea name="content" cols="100" rows="8" placeholder="ご注文個数は、お一人様１台限りとさせていただきます。"></textarea></td>
+                                <th>ご注文 ／ お問い合わせ<span>（必須）</span></th>
+                                <td>
+                                    <select name="post-title" required>
+                                        <option value="">選択してください</option>
+                                        <option value="red">ご注文（1台）</option>
+                                        <option value="blue">お問い合わせ</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>お問い合わせ内容</th>
+                                <td><textarea name="content" cols="100" rows="8" placeholder="お問い合わせ内容をご入力ください。"></textarea></td>
                             </tr>
                             <tr class="message-box">
                                 <td class="form-message">
                                     ※ご入力内容をご確認の上、送信してください。<br>
-                                    ※お預かりした個人情報は、注文確認・配送手続き以外の用途には利用しません。<br>
-                                    ※お送りいただいた内容を確認した後、返信にてご注文内容の確認をさせていただきます。
+                                    ※お預かりした個人情報は、注文確認・配送手続き以外の用途には利用致しません。<br>
+                                    ※3日以内に、返信にてご注文内容の確認をさせていただきます。<br>
+                                    ※当サイトからのメールは「<a href="mailto:contact@kurosuke-no-mori.com">contact@kurosuke-no-mori.com</a>」より送信致します。「<a href="mailto:contact@kurosuke-no-mori.com">@kurosuke-no-mori.com</a>」の受信設定をお願いします。
                                 </td>
                             </tr>
                             <tr>
