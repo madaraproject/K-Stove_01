@@ -439,7 +439,7 @@ main {
 
 #mv {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   min-height: 680px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -518,7 +518,7 @@ main {
 #mv .mv-content .item-01 {
   position: absolute;
   top: 50%;
-  left: -20px;
+  left: 0;
   width: 65%;
   max-width: 550px;
   -webkit-transform: translate(0, -50%);
@@ -527,7 +527,7 @@ main {
 
 #mv .mv-content .mv-title-box {
   position: absolute;
-  top: 0;
+  top: -20px;
   right: 0;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
