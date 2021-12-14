@@ -437,10 +437,10 @@ main {
         .logo-link {
             .logo {
                 position: fixed;
-                top: 0;
-                left: 0;
-                width: 120px;
-                height: 120px;
+                top: 15px;
+                left: 15px;
+                width: 90px;
+                height: 90px;
                 z-index: 2;
             }
         }
@@ -492,8 +492,10 @@ main {
             position: relative;
             .logo-link {
                 .logo {
-                    width: 80px;
-                    height: 80px;
+                    top: 10px;
+                    left: 10px;
+                    width: 60px;
+                    height: 60px;
                 }
             }
             .item-01 {
@@ -534,12 +536,14 @@ main {
         }
         .item-name {
             text-align: center;
+            text-shadow: 0 0 4px#000000;
             font-size: 30px;
-            font-weight: bold;
             line-height: 1;
         }
         .item-price {
             text-align: center;
+            text-shadow: 0 0 4px#000000;
+            font-size: 16px;
             line-height: 1;
         }
     }
@@ -548,8 +552,9 @@ main {
     #info {
         .inner {
             * + * {margin-top: 20px;}
-            .item-name {
-                font-size: 20px;
+            .item-name {font-size: 20px;}
+            .item-price {
+                font-size: 12px;
             }
         }
     }
@@ -970,7 +975,13 @@ main {
             font-size: 16px;
             font-weight: bolder;
             margin-bottom: 20px;
-            span {
+            .price {
+                font-family: $font-futura;
+                font-size: 26px;
+                font-weight: bolder;
+                line-height: 2.5;
+            }
+            .sub {
                 font-size: 12px;
                 font-weight: normal;
             }

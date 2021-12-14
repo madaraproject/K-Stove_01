@@ -507,10 +507,10 @@ main {
 
 #mv .mv-content .logo-link .logo {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 120px;
+  top: 15px;
+  left: 15px;
+  width: 90px;
+  height: 90px;
   z-index: 2;
 }
 
@@ -577,8 +577,10 @@ main {
     position: relative;
   }
   #mv .mv-content .logo-link .logo {
-    width: 80px;
-    height: 80px;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
   }
   #mv .mv-content .item-01 {
     position: relative;
@@ -627,13 +629,15 @@ main {
 
 #info .inner .item-name {
   text-align: center;
+  text-shadow: 0 0 4px #000000;
   font-size: 30px;
-  font-weight: bold;
   line-height: 1;
 }
 
 #info .inner .item-price {
   text-align: center;
+  text-shadow: 0 0 4px #000000;
+  font-size: 16px;
   line-height: 1;
 }
 
@@ -643,6 +647,9 @@ main {
   }
   #info .inner .item-name {
     font-size: 20px;
+  }
+  #info .inner .item-price {
+    font-size: 12px;
   }
 }
 
@@ -1194,7 +1201,14 @@ main {
   margin-bottom: 20px;
 }
 
-#order .inner p span {
+#order .inner p .price {
+  font-family: "futura-pt", "Noto Sans JP", sans-serif;
+  font-size: 26px;
+  font-weight: bolder;
+  line-height: 2.5;
+}
+
+#order .inner p .sub {
   font-size: 12px;
   font-weight: normal;
 }

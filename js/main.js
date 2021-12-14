@@ -26,6 +26,9 @@ $(function(){
   $('.menu-close').click(function(){
     $('nav').removeClass('nav-open');
   });
+  $('nav li').click(function(){
+    $('nav').removeClass('nav-open');
+  });
 
   /*=================================================
   form action
