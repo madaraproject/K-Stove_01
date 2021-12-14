@@ -439,7 +439,7 @@ main {
 
 #mv {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   min-height: 680px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,9 +517,10 @@ main {
 #mv .mv-content .item-01 {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -8%;
   width: 65%;
-  max-width: 550px;
+  min-width: 600px;
+  padding: 90px;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
@@ -566,6 +567,8 @@ main {
 
 @media (max-width: 900px) {
   #mv {
+    height: 100%;
+    min-height: 600px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -582,7 +585,9 @@ main {
     top: 0;
     left: 50%;
     width: 100%;
+    min-width: 280px;
     max-width: 400px;
+    padding: 0;
     -webkit-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
   }
@@ -768,13 +773,20 @@ main {
   height: 100%;
   background: linear-gradient(45deg, white 0%, #e6e6e6 100%);
   overflow: hidden;
-  padding: 100px 50px;
+}
+
+#point-01 .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #point-01 .inner .text-box {
   width: calc(100% - calc(100% - 50vw));
   color: #2b2b2b;
-  /*background: $color-through-black;*/
   margin: -100px auto -100px calc(50% - 50vw + 25px);
   padding: 100px 50px 100px calc(-50% + 50vw - 25px);
 }
@@ -784,12 +796,8 @@ main {
 }
 
 #point-01 .inner .point-01-item {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 40%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  width: 45vw;
+  margin-right: calc(25px + calc(50% - 50vw));
 }
 
 @media (max-width: 900px) {
@@ -797,9 +805,6 @@ main {
     padding: 0;
   }
   #point-01 .inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -827,23 +832,24 @@ main {
   height: 100%;
   background: linear-gradient(-45deg, white 0%, #e0e0e0 100%);
   overflow: hidden;
-  padding: 100px 50px;
 }
 
 #point-02 .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 #point-02 .inner .text-box {
   width: calc(100% - calc(100% - 50vw));
   color: #2b2b2b;
-  /*background: $color-through-black;*/
   margin: -100px calc(50% - 50vw + 25px) -100px auto;
   padding: 100px calc(-50% + 50vw - 25px) 100px 50px;
 }
@@ -860,17 +866,19 @@ main {
 }
 
 #point-02 .inner .point-02-item {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 40%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  width: 45vw;
+  margin-left: calc(25px + calc(50% - 50vw));
 }
 
 @media (max-width: 900px) {
   #point-02 {
     padding: 0;
+  }
+  #point-02 .inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   #point-02 .inner .text-box {
     position: relative;
