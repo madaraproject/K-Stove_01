@@ -806,7 +806,8 @@ main {
             }
             .owner-photo {
                 width: 70%;
-                max-width: 340px;
+                min-width: 200px;
+                max-width: 300px;
                 margin: 0 auto 40px auto;
             }
         }
@@ -879,7 +880,8 @@ main {
             }
             .member-photo {
                 width: 70%;
-                max-width: 340px;
+                min-width: 200px;
+                max-width: 300px;
                 margin: 0 auto 40px auto;
             }
         }
