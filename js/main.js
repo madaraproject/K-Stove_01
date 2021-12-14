@@ -1,22 +1,15 @@
 $(function(){
   /*=================================================
-  gallery hover action
+  slick slider
   ===================================================*/
-  $("#thumbnail img").on('click', function(){
-    $("#thumbnail img").css('border','none');
-    $(this).css('border','6px solid #ffffff');
-    // 画像パス取得
-    let img_src = $(this).attr("src");
-    // 表示画像と同じサムネイルがクリックされた際は画像切り替えを実行しない
-    // （メイン画像のsrcと九クリックされた画像のsrcが異なる場合のみ実行）
-    if($("#slide img").attr("src") != img_src) {
-      // ※「フェードアウトが完了した後に実行」のように、何かの処理が終わったあとに実行させたい場合、コールバック関数を使用
-      $("#slide img").fadeOut(200, function() {
-          $("#slide img").attr({src:img_src});
-          $("#slide img").fadeIn(200);
-      })
-    }
-  });
+	$('.slider').slick({
+    autoplay: true,
+    infinite: true,
+    prevArrow: '<div class="slick-prev"></div>',
+    nextArrow: '<div class="slick-next"></div>',
+    dots: true,
+	});
+
   /*=================================================
   nav open close action
   ===================================================*/

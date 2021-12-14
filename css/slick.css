@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*----- link area -----*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  width: 13%;
+  height: 100%;
+  outline: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slick-prev {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.slick-prev::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 25%;
+  height: 100%;
+  background: url(../img/arrow_left.svg) no-repeat center;
+  z-index: 100;
+}
+
+.slick-next {
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.slick-next::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 35%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 25%;
+  height: 100%;
+  background: url(../img/arrow_right.svg) no-repeat center;
+  z-index: 100;
+}
+
+/*----- dots -----*/
+.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  margin: -20px 0 0 0;
+  z-index: 3;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #aaaaaa;
+  background: #ccc;
+}
+
+.slick-dots .slick-active button {
+  background: #2b2b2b;
+  /*ドットボタンの現在地表示の色*/
+}
+/*# sourceMappingURL=slick.css.map */
