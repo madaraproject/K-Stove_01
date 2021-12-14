@@ -32,6 +32,10 @@
   width: 25%;
   height: 100%;
   background: url(../img/arrow_left.svg) no-repeat center;
+  -webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
+  will-change: filter;
+  /* drop-shadow 見切れ防止 */
   z-index: 100;
 }
 
@@ -52,6 +56,10 @@
   width: 25%;
   height: 100%;
   background: url(../img/arrow_right.svg) no-repeat center;
+  -webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
+  will-change: filter;
+  /* drop-shadow 見切れ防止 */
   z-index: 100;
 }
 
