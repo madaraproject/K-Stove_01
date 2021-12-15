@@ -126,6 +126,11 @@ img {width: 100%;}
     width: 70px;
     margin: 0 auto 20px auto;
 }
+@include tab {
+    .visual-icon {
+        width: 60px;
+    }
+}
 
 
 .btn {
