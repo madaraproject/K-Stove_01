@@ -682,10 +682,6 @@ main {
 }
 
 #lead .lead-01 .lead-catch {
-  /*
-            width: 50%;
-            margin-right: -50px;
-            */
   width: 50vw;
   margin-right: calc(25px + calc(50% - 50vw));
   -webkit-filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
@@ -967,7 +963,7 @@ main {
 
 #product-owner .inner .owner-photo {
   width: 30%;
-  min-width: 260px;
+  min-width: 230px;
   border-radius: 50%;
   margin-left: 80px;
   -webkit-filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
@@ -1059,7 +1055,7 @@ main {
 
 #product-member .inner .member-photo {
   width: 30%;
-  min-width: 260px;
+  min-width: 230px;
   margin-left: 80px;
   -webkit-filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
