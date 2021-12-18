@@ -537,7 +537,7 @@ main {
     overflow: hidden;
     .inner {
         * + * {
-            margin-top: 40px;
+            margin-top: 30px;
         }
         .item-name {
             text-align: center;
@@ -578,9 +578,8 @@ main {
         }
         .lead-catch {
             width: 50vw;
+            box-shadow: -20px 20px 15px rgba(0, 0, 0, 0.2);
             margin-right: calc(25px + calc(50% - 50vw));
-            filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
-            will-change: filter; /* drop-shadow 見切れ防止 */
         }
     }
     .lead-02 {
@@ -590,29 +589,32 @@ main {
             width: 31%;
             text-align: center;
             .item-img {
-                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-                will-change: filter; /* drop-shadow 見切れ防止 */
+                box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
             }
             .item-title {
                 position: relative;
                 display: inline-block;
                 text-align: center;
-                font-size: 16px;
                 font-weight: bold;
+                color: $color-white;
                 margin: 15px auto;
-                &::after {
+                padding: 4px 15px;
+                &::before {
                     content: '';
                     position: absolute;
-                    bottom: -5px;
+                    bottom: 0;
                     left: 0;
                     width: 100%;
-                    height: 4px;
-                    background-color: $color-ribbon;
+                    height: 100%;
+                    background-color: $color-black;
+                    transform: skewX(-20deg);
+                    box-shadow: -4px 4px 4px rgba(0,0,0,0.2);
+                    z-index: -1;
                 }
             }
             p {
                 text-align: left;
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     }
@@ -641,7 +643,6 @@ main {
                 max-width: 600px;
                 margin: 0 auto;
                 .item-img {width: 100%;}
-                .item-title {font-size: 14px;}
             }
         }
     }
@@ -664,6 +665,7 @@ main {
         }
         .point-01-item {
             width: 45vw;
+            box-shadow: -20px 20px 15px rgba(0, 0, 0, 0.2);
             margin-right: calc(25px + calc(50% - 50vw));
         }
     }
@@ -715,6 +717,7 @@ main {
         }
         .point-02-item {
             width: 45vw;
+            box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.2);
             margin-left: calc(25px + calc(50% - 50vw));
         }
     }
@@ -764,7 +767,6 @@ main {
             .owner-name {
                 position: relative;
                 display: inline-block;
-                font-size: 16px;
                 font-weight: bold;
                 line-height: 1;
                 margin-bottom: 20px;
@@ -781,7 +783,7 @@ main {
                 }
             }
             .owner-profile {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
         .owner-photo {
@@ -789,7 +791,7 @@ main {
             min-width: 230px;
             border-radius: 50%;
             margin-left: 80px;
-            filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(-20px 20px 15px rgba(0, 0, 0, 0.25));
             will-change: filter; /* drop-shadow 見切れ防止 */
         }
     }
@@ -802,9 +804,6 @@ main {
                 text-align: center;
                 .owner-copy {
                     font-size: 18px;
-                }
-                .owner-name {
-                    font-size: 14px;
                 }
                 .owner-profile {
                     text-align: left;
@@ -837,7 +836,6 @@ main {
             .member-name {
                 position: relative;
                 display: inline-block;
-                font-size: 16px;
                 font-weight: bold;
                 line-height: 1;
                 margin-bottom: 20px;
@@ -855,14 +853,14 @@ main {
             }
             .member-profile {
                 text-align: left;
-                font-size: 12px;
+                font-size: 14px;
             }
         }
         .member-photo {
             width: 30%;
             min-width: 230px;
             margin-left: 80px;
-            filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(-20px 20px 15px rgba(0, 0, 0, 0.25));
             will-change: filter; /* drop-shadow 見切れ防止 */
         }
     }
@@ -875,9 +873,6 @@ main {
                 text-align: center;
                 .member-copy {
                     font-size: 18px;
-                }
-                .member-name {
-                    font-size: 14px;
                 }
                 .member-profile {
                     text-align: left;
@@ -896,11 +891,10 @@ main {
 #gallery {
     background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 100%);
     .inner {
-        #slider {
+        .slider {
             position: relative;
             width: 100%;
-            filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.25));
-            will-change: filter; /* drop-shadow 見切れ防止 */
+            box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
             margin: 0 auto;
             li {
                 width: 100%;
@@ -927,30 +921,34 @@ main {
 #details {
     background-color: $color-black;
     .inner {
-        color: $color-white;
+        .head-02 {
+            color: $color-white;
+        }
         .detail-table {
             width: 100%;
-            will-change: filter; /* drop-shadow 見切れ防止 */
             margin-bottom: 20px;
             tr:nth-of-type(odd) {
-                background-color: $color-dark-gray;
+                background-color: #dddddd;
             }
             tr:nth-of-type(even) {
-                background-color: $color-light-gray;
+                background-color: #ffffff;
             }
             tr {
                 .td-left {
-                    width: 30%;
-                    padding: 10px 10px 10px 20px;
+                    width: 25%;
+                    min-width: 100px;
+                    padding: 10px 20px;
                 }
                 .td-right {
-                    width: 70%;
-                    padding: 10px 20px 10px 10px;
+                    width: 75%;
+                    border-left: 1px solid #bbbbbb;
+                    padding: 10px 20px;
                 }
             }
         }
         .notes {
             font-size: 11px;
+            color: $color-white;
             li + li {margin-top: 8px;}
         }
     }
@@ -958,7 +956,13 @@ main {
 @include tab {
     #details {
         .inner {
-            .detail-table {font-size: 12px;}
+            .detail-table {
+                font-size: 12px;
+                tr {
+                    .td-left {padding: 10px 15px;}
+                    .td-right {padding: 10px 15px;}
+                }
+            }
         }
     }
 }
