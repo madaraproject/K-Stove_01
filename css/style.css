@@ -734,7 +734,6 @@ main {
 
 #lead .lead-02 .lead-item p {
   text-align: left;
-  font-size: 14px;
 }
 
 @media (max-width: 900px) {
