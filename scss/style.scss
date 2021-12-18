@@ -628,8 +628,8 @@ main {
                 padding: 0;
             }
             .lead-catch {
-                width: 100%;
-                margin: 0 auto 40px auto;
+                width: 100vw;
+                margin: 0 auto 40px -20px;
             }
         }
         .lead-02 {
@@ -914,6 +914,16 @@ main {
         }
     }
 }
+@include tab {
+    #gallery {
+        .inner {
+            .slider {
+                width: 100vw;
+                margin: 0 auto 0 -20px;
+            }
+        }
+    }
+}
 
 #details {
     background-color: $color-black;
@@ -925,7 +935,7 @@ main {
             width: 100%;
             margin-bottom: 20px;
             tr:nth-of-type(odd) {
-                background-color: #dddddd;
+                background-color: #eeeeee;
             }
             tr:nth-of-type(even) {
                 background-color: #ffffff;
@@ -938,7 +948,7 @@ main {
                 }
                 .td-right {
                     width: 75%;
-                    border-left: 1px solid #bbbbbb;
+                    border-left: 1px solid #cccccc;
                     padding: 10px 20px;
                 }
             }
