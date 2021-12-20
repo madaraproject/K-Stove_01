@@ -908,6 +908,7 @@ main {
             box-shadow: 0 0 1px rgba(0, 0, 0, 1);
             filter: drop-shadow(0 20px 15px rgba(0, 0, 0, 0.2));
             will-change: filter; /* drop-shadow 見切れ防止 */
+            background: rgba(0, 0, 0, 0.2);
             margin: 0 auto;
             li {
                 width: 100%;
