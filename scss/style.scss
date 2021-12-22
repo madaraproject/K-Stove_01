@@ -531,33 +531,42 @@ main {
 #info {
     width: 100%;
     height: 100%;
-    color: $color-white;
+    color: $color-black;
     background: url(../img/info-bg.jpg) no-repeat center;
     background-size: cover;
     overflow: hidden;
+    padding: 50px;
     .inner {
+        background: linear-gradient(-180deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 100%);
+        filter: drop-shadow(0 0 1px $color-through-black);
+        will-change: filter; /* drop-shadow 見切れ防止 */
+        padding: 30px;
         * + * {
-            margin-top: 30px;
+            margin-top: 20px;
         }
         .item-name {
             text-align: center;
-            text-shadow: 0 0 4px#000000;
-            font-size: 30px;
+            font-family: $font-futura;
+            font-size: 24px;
+            font-weight: bold;
             line-height: 1;
         }
         .item-price {
             text-align: center;
-            text-shadow: 0 0 4px#000000;
+            font-family: $font-futura;
             font-size: 16px;
+            font-weight: bold;
             line-height: 1;
         }
     }
 }
 @include tab {
     #info {
+        padding: 20px;
         .inner {
+            padding: 20px;
             * + * {margin-top: 20px;}
-            .item-name {font-size: 20px;}
+            .item-name {font-size: 18px;}
             .item-price {
                 font-size: 12px;
             }
@@ -578,10 +587,9 @@ main {
         }
         .lead-catch {
             aspect-ratio: 16/9;
-            background: #aaaaaa;
             width: 50vw;
             box-shadow: 0 0 1px rgba(0, 0, 0, 1);
-            filter: drop-shadow(-20px 20px 15px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.2));
             will-change: filter; /* drop-shadow 見切れ防止 */
             margin-right: calc(25px + calc(50% - 50vw));
         }
@@ -670,7 +678,7 @@ main {
         .point-01-item {
             width: 45vw;
             box-shadow: 0 0 1px rgba(0, 0, 0, 1);
-            filter: drop-shadow(-20px 20px 15px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(-20px 20px 10px rgba(0, 0, 0, 0.2));
             will-change: filter; /* drop-shadow 見切れ防止 */
             margin-right: calc(25px + calc(50% - 50vw));
         }
@@ -724,7 +732,7 @@ main {
         .point-02-item {
             width: 45vw;
             box-shadow: 0 0 1px rgba(0, 0, 0, 1);
-            filter: drop-shadow(-20px 20px 15px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.2));
             will-change: filter; /* drop-shadow 見切れ防止 */
             margin-left: calc(25px + calc(50% - 50vw));
         }
@@ -906,7 +914,7 @@ main {
             position: relative;
             width: 100%;
             box-shadow: 0 0 1px rgba(0, 0, 0, 1);
-            filter: drop-shadow(0 20px 15px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.2));
             will-change: filter; /* drop-shadow 見切れ防止 */
             background: rgba(0, 0, 0, 0.2);
             margin: 0 auto;
