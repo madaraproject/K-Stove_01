@@ -622,7 +622,7 @@ main {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background-color: $color-black;
+                    background: linear-gradient(0deg, #111111 0%, #333333 100%);
                     transform: skewX(-30deg);
                     box-shadow: -4px 4px 4px rgba(0,0,0,0.2);
                     z-index: -1;
@@ -664,7 +664,7 @@ main {
 #point-01 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(250,250,250,1) 0%, rgba(230,230,230,1) 100%);
+    background: #f5f5f5;
     overflow: hidden;
     .inner {
         display: flex;
@@ -711,8 +711,9 @@ main {
 #point-02 {
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, rgba(250,250,250,1) 0%, rgba(230,230,230,1) 100%);
+    background: #f5f5f5;
     overflow: hidden;
+    padding-top: 0;
     .inner {
         display: flex;
         align-items: center;
@@ -909,7 +910,7 @@ main {
 }
 
 #gallery {
-    background: linear-gradient(45deg, rgba(250,250,250,1) 0%, rgba(230,230,230,1) 100%);
+    background: #f5f5f5;
     .inner {
         .slider {
             position: relative;

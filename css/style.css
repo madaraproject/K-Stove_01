@@ -754,7 +754,8 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #222222;
+  background: -webkit-gradient(linear, left bottom, left top, from(#111111), to(#333333));
+  background: linear-gradient(0deg, #111111 0%, #333333 100%);
   -webkit-transform: skewX(-30deg);
           transform: skewX(-30deg);
   -webkit-box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.2);
@@ -808,7 +809,7 @@ main {
 #point-01 {
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #fafafa 0%, #e6e6e6 100%);
+  background: #f5f5f5;
   overflow: hidden;
 }
 
@@ -873,8 +874,9 @@ main {
 #point-02 {
   width: 100%;
   height: 100%;
-  background: linear-gradient(-45deg, #fafafa 0%, #e6e6e6 100%);
+  background: #f5f5f5;
   overflow: hidden;
+  padding-top: 0;
 }
 
 #point-02 .inner {
@@ -1128,7 +1130,7 @@ main {
 }
 
 #gallery {
-  background: linear-gradient(45deg, #fafafa 0%, #e6e6e6 100%);
+  background: #f5f5f5;
 }
 
 #gallery .inner .slider {
